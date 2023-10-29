@@ -1,0 +1,29 @@
+//font-family
+$font: hatolie, serif;
+
+// Colors
+$primary: hsl(34, 32%, 81%);
+$secondary: hsl(34, 32%, 70%);
+$tertiary: hsl(34, 32%, 60%);
+$colorDiscount: green;
+$colorStroke: grey;
+$hoverNav: hsl(24, 100%, 52%);
+$btnDeatil: blue;
+$btnBuy: tomato;
+
+//font-sizes
+$brand-name: calc(0.7rem + 3vw);
+$nav-link: calc(0.7rem + 1vw);
+$centerLogo: calc(0.7rem + 14vw);
+$heading1: calc(0.7rem + 8vw);
+$heading2: calc(0.7rem + 4vw);
+$heading3: calc(0.7rem + 2vw);
+$body: calc(0.5rem + 1vw);
+$desc:calc(0.5rem + 0.5vw);
+
+//font-weight
+$regular: 400;
+$bold: 700;
+
+//paragraph-size
+$paraSize: 55ch;

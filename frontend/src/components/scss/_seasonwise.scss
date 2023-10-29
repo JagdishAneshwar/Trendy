@@ -1,0 +1,26 @@
+@import "./variable";
+
+.season-section {
+  position: relative;
+  padding: 0;
+}
+
+.carousel-item {
+  position: relative;
+  height: 70vh;
+  .carousel-caption {
+    position: absolute;
+    top: 40%;
+    bottom: 0%;
+    h5 {
+      font-size: $heading2;
+    }
+  }
+  .carousel-img {
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+  }
+}

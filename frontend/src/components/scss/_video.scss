@@ -1,0 +1,19 @@
+@import "./variable";
+
+.video {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  z-index: -3;
+  filter: brightness(50%);
+}
+.main-text {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  font-family: $font;
+  font-size: $centerLogo;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}

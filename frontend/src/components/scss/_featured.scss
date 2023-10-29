@@ -1,0 +1,93 @@
+@import "./variable";
+
+.products-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 0;
+}
+
+.filter-product-parent {
+  width: 100%;
+  height: 100%;
+}
+
+.filter-wrapper {
+  width: 18%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(243, 243, 243);
+}
+
+.filter {
+  margin: 8px;
+  .accordion-button {
+    font-size: $body;
+    &::after {
+      background-image: url("../../components/img/assets/plus-lg.svg");
+    }
+    &:not(.collapsed):after {
+      background-image: url("../../components/img/assets/dash-lg.svg");
+    }
+  }
+  .form-check {
+    #CheckBox {
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .form-check-label {
+      font-size: $body;
+    }
+  }
+}
+
+.card-img-top{
+  width: 28.5R;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  .product-wrapper {
+    width: 23%;
+    margin: 3%;
+  }
+  .filtered-product {
+    display: flex;
+    flex-direction: column;
+    font-size: $font;
+    .brand-name {
+      font-size: 1rem;
+      color: grey;
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .offer {
+      font-weight: bold;
+      color: hsl(133, 63%, 40%);
+    }
+
+    .stroke-text {
+      text-decoration: line-through;
+      color: hsl(0, 0%, 53%);
+      margin-left: 2px;
+    }
+    .card-body {
+      padding: 2rem;
+      width: 100%;
+      background-color: beige;
+    }
+  }
+}

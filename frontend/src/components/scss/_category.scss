@@ -1,0 +1,61 @@
+@import "./variable";
+
+.category-section {
+  position: relative;
+  background-color: $primary;
+}
+
+.draw {
+  position: absolute;
+  transform: translate(10%, -10%);
+  width: 30%;
+  height: 60%;
+  border: 2px solid $tertiary;
+}
+
+.title-category {
+  text-align: center;
+  font-family: $font;
+  font-size: $heading1;
+  letter-spacing: 4px;
+}
+
+.categories {
+  width: auto;
+  display: flex;
+  z-index: 2;
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
+.category {
+  width: 24.8%;
+  flex: 1;
+  margin-bottom: 6vw;
+  filter: grayscale(10%);
+  transition: all 1s ease;
+  filter: brightness(70%) blur(1px);
+  &:hover {
+    filter: brightness(100%) blur(0px);
+  }
+  &:hover .category-caption {
+    color: transparent;
+  }
+}
+
+.category-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $heading2;
+  color: white;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: hsl(40, 2%, 40%);
+}
