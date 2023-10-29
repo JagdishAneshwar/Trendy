@@ -1,4 +1,7 @@
 # Trendy
+
+Live: https://jagdish-trendy.netlify.app/
+
 # Description
 It is online trendy clothing website. which sells mens, womens, and kids clothes for different category and sizes.
  Work on Progress :construction:
