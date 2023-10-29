@@ -2,7 +2,7 @@ import React, { useContext, useEffect, createRef } from "react";
 import "./scss/_offer.scss";
 // import Horizontaloffer from "./Sticky";
 import clotheContext from "../context/clotheContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Offer = () => {
   const context = useContext(clotheContext);
