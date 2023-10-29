@@ -21,7 +21,7 @@ const ClotheState = (props) => {
   // fetch all notes function
   const getClothes = async () => {
     // API calls
-    const response = await fetch(`/api/clothes/fetchallclothes/`, {
+    const response = await fetch(`https://trendy-backend.onrender.com/api/clothes/fetchallclothes/`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const ClotheState = (props) => {
 
   const getBoughtsInfo = async () => {
     // API calls
-    const response = await fetch(`/api/kart/boughtInfo`, {
+    const response = await fetch(`https://trendy-backend.onrender.com/api/kart/boughtInfo`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const ClotheState = (props) => {
     quantity,
     navigate
   ) => {
-    await fetch(`/api/kart/addBought`, {
+    await fetch(`https://trendy-backend.onrender.com/api/kart/addBought`, {
       mode: "cors",
       method: "POST",
       headers: {
@@ -114,7 +114,7 @@ const ClotheState = (props) => {
   };
 
   const updateBought = async (id, quantity) => {
-    const response = await fetch(`/api/kart/updateQuantity/${id}`, {
+    const response = await fetch(`https://trendy-backend.onrender.com/api/kart/updateQuantity/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
