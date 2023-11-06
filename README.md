@@ -30,14 +30,6 @@ Trendy is designed to provide users with a seamless shopping experience, showcas
 3. Start the backend server with `npm start`.
 4. Launch the frontend application with `npm start`.
 
-## Features
-
-Trendy offers the following key features:
-
-- User-friendly product browsing and search functionality.
-- Secure and efficient transaction processing for purchasing products.
-- User account management and order tracking for a personalized shopping experience.
-
 ## Backend Setup
 
 The backend of Trendy is developed using Node.js and Express, with MongoDB as the primary database. Ensure that you have Node.js and MongoDB installed on your system before proceeding with the setup.
