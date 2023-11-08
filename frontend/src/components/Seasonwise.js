@@ -3,6 +3,9 @@ import clotheContext from "../context/clotheContext";
 import { useNavigate } from "react-router-dom";
 import "./scss/_seasonwise.scss";
 
+
+  // Carousel
+
 const Seasonwise = () => {
   const context = useContext(clotheContext);
   const { fromCategory } = context;

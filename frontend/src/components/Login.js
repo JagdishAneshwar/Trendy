@@ -15,6 +15,7 @@ const Login = () => {
     e.preventDefault();
     const res = await fetch("https://trendy-backend.onrender.com/api/auth/login", {
       method: "POST",
+      
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Headers": "*",
@@ -36,10 +37,10 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Login</h2>
-      <form onSubmit={onClickLogin}>
-        <div className="mb-3">
+    <div className="login-section">
+      <form className='login-form' onSubmit={onClickLogin}>
+      <h1>Login</h1>
+        <div>
           <label htmlfor="exampleInputEmail1" className="form-label">
             Email address
           </label>
@@ -65,7 +66,7 @@ const Login = () => {
             onChange={onChange}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary btn-lg login-btn">
           Submit
         </button>
       </form>

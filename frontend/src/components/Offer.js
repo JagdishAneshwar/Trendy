@@ -4,6 +4,8 @@ import "./scss/_offer.scss";
 import clotheContext from "../context/clotheContext";
 import { useNavigate } from "react-router-dom";
 
+// feature
+
 const Offer = () => {
   const context = useContext(clotheContext);
   const { clothes, getClothes, toComponentB } = context;
@@ -21,6 +23,8 @@ const Offer = () => {
       image.current.scrollLeft += 500;
     }
   };
+
+  console.log(clothes)
 
   return (
     <section className="offer-section" data-scroll-section>

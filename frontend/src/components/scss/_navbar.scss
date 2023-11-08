@@ -1,7 +1,6 @@
 @import "./variable";
 .nav-bar-wrapper {
-  width: 100%;
-  padding-bottom: 56px;
+  width: 80%;
   position: relative;
 }
 
@@ -10,29 +9,51 @@
   position: fixed;
   z-index: 1010;
   width: 100%;
-  height: 56px;
+  height: 70px;
   backdrop-filter: blur(5px);
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar > .container{
+max-width: 100%;
+height: 100%;
+margin: 0;padding: 0;
+padding-left: 3%;
+padding-right: 3%;
+}
+
+.nav-start{
+  margin: 0;padding: 0;
+  height: 100%;
 }
 
 .navbar-brand-name {
-  font-family: $font;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+font-family: 'Cinzel Decorative', serif;
+font-family: 'lora';
   text-decoration: none;
   color: white !important;
   font-size: $brand-name;
   letter-spacing: 4px;
-  margin-left: 5px;
   &:hover {
     color: $tertiary;
   }
 }
+.nav-end{
+  justify-content: center;
+}
 
-.logout {
+
+.logout, .cart-nav {
   border: 0px;
   background-color: transparent;
-  display: flex;
   align-items: center;
-  flex-direction: row;
-  width: auto;
+  width: 100%;
 }
 
 .navbar-toggler {
@@ -46,7 +67,6 @@
 .nav-link {
   color: white;
   font-size: $nav-link;
-  line-height: 8px;
   &:hover {
     color: $hoverNav;
   }

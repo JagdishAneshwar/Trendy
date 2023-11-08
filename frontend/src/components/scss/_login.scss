@@ -1,0 +1,29 @@
+.login-section{
+    width: 100vw;
+    height: 100vh;
+    background: #ffefc2;
+    padding-top: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.login-form{
+    width: 50%;
+    height: 50%;
+    margin-left: 0 0 auto;
+}
+
+.login-form > h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+label{
+    font-size: 20px;
+}
+
+
+.login-btn{
+    width: 100px;
+}

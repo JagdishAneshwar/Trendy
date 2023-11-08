@@ -14,6 +14,7 @@ const Detailed = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
 
   const increament = () => {
     quantity++;
@@ -32,6 +33,7 @@ const Detailed = () => {
                     alt="..."
                   ></div>
             </div>
+           
           </div>
           <div className="info col-7">
             <div className="card-body info-body">
@@ -59,6 +61,9 @@ const Detailed = () => {
                     data-bs-target="#collapseOne"
                     aria-expanded="false"
                     aria-controls="collapseOne"
+                    onClick={(e) => {
+    e.preventDefault(); 
+  }}
                   >
                     <h2>Product Details</h2>
                   </button>

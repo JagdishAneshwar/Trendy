@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Lora&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +16,7 @@ html {
   height: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: "Cinzel";
 }
 
 body {
