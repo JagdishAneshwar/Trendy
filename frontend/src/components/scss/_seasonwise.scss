@@ -24,3 +24,13 @@
     min-height: 300px;
   }
 }
+
+
+
+
+
+@media (max-width: 480px){
+  .carousel-item {
+    position: relative;
+    height: fit-content;
+}}
