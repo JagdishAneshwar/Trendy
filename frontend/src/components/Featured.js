@@ -29,6 +29,7 @@ const Featured = () => {
   const navigate = useNavigate();
 
   return (
+    <>
     <section className="products-section" data-scroll-section>
       <div className="filter-product-parent">
         <div className="filter-wrapper">
@@ -476,8 +477,9 @@ const Featured = () => {
           })}
         </div>
       </div>
-      <Footer/>
+      
     </section>
+    </>
   );
 };
 

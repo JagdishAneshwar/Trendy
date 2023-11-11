@@ -1,4 +1,4 @@
-.login-section{
+.signup-section{
     width: 100vw;
     height: 95vh;
     background: #ffefc2;
@@ -8,13 +8,13 @@
     display: flex;
 }
 
-.login-form{
+.signup-form{
     width: 50%;
     height: 50%;
     margin-left: 0 0 auto;
 }
 
-.login-form > h1{
+.signup-form > h1{
     font-size: 30px;
     font-weight: bold;
 }
@@ -24,6 +24,6 @@ label{
 }
 
 
-.login-btn{
+.signup-btn{
     width: 100px;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './scss/signup.scss'
 import { useNavigate } from "react-router-dom";
 import Footer from './Footer'
 
@@ -34,9 +35,9 @@ const Signup = () => {
 
   return (
     <>
-    <div className="conatiner">
-      <h2>SignUp</h2>
-      <form onSubmit={onClickSignUp}>
+    <div className="signup-section">
+      <form className="signup-form" onSubmit={onClickSignUp}>
+      <h1>SignUp</h1>
         <div className="mb-3">
           <label htmlfor="name" className="form-label">
             Name
@@ -89,7 +90,7 @@ const Signup = () => {
             onChange={onChange}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary signup-btn">
           Submit
         </button>
       </form>
