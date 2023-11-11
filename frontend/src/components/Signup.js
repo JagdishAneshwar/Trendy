@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from './Footer'
 
 const Signup = () => {
   let history = useNavigate();
@@ -32,6 +33,7 @@ const Signup = () => {
   };
 
   return (
+    <>
     <div className="conatiner">
       <h2>SignUp</h2>
       <form onSubmit={onClickSignUp}>
@@ -92,6 +94,8 @@ const Signup = () => {
         </button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import Video from "./Video";
 import Category from "./Category";
 import Offer from "./Offer";
 import Seasonwise from "./Seasonwise";
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Category />
       <Seasonwise />
       <Offer />
+      <Footer/>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import clotheContext from "../context/clotheContext";
+import Footer from './Footer'
 import "./scss/_detailed.scss";
 
 const Detailed = () => {
@@ -21,6 +22,7 @@ const Detailed = () => {
     return quantity;
   };
   return (
+    <>
     <div className="product-details" data-scroll-section id="hello">
       <div className="contain">
         <div className="details row ">
@@ -164,6 +166,8 @@ const Detailed = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
