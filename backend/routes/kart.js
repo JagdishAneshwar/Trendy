@@ -57,4 +57,19 @@ router.put("/updateQuantity/:id", fetchuser, async (req, res) => {
   }
 });
 
+router.delete("/delete/:id", fetchuser, async (req, res) => {
+
+  var bought = await Bought.findById(req.params.id);
+
+  try {
+    bought = await Bought.findByIdAndDelete(
+      req.params.id,
+    );
+    res.json(bought);
+  } catch (error) {
+    console.log(error.message);
+    res.json({ error: "Internal Server ERROR!!", error: error.message });
+  }
+});
+
 module.exports = router;

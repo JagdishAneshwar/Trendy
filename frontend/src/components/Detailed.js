@@ -23,21 +23,18 @@ const Detailed = () => {
   };
   return (
     <>
-    <div className="product-details" data-scroll-section id="hello">
+    <section className="product-details" data-scroll-section id="hello">
       <div className="contain">
-        <div className="details row ">
+        <div className="details">
           <div className="preview">
-            <div className="product-img">
             <div
             className="detailed-img"
                     style={{backgroundImage: `url(${image})`}}   
                     
                     alt="..."
-                  ></div>
-            </div>
-           
+                  ></div>          
           </div>
-          <div className="info col-7">
+          <div className="info ">
             <div className="card-body info-body">
               <h5 className="brand-name">{brand}</h5>
               <h4 className="detail-product-title">{title}</h4>
@@ -165,7 +162,7 @@ const Detailed = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <Footer/>
     </>
   );

@@ -2,7 +2,8 @@
 
 .product-details {
   width: 100vw;
-  height: 100vh;
+  min-height: 120vh;
+  height: fit-content;
   padding: 0;
   margin: 0;
   position: relative;
@@ -16,24 +17,27 @@
     width: 100%;
     height: 100%;
     margin: 2%;
+    display: flex;
   }
 }
 
 .preview {
   height: 100%;
-  position: fixed;
   width: 33%;
-  .product-img{
-    width: 100%;height: 100%;
+  position: sticky;
+  top: 90px;
+  background: green;
+  z-index: -3;
   .detailed-img {
+    position: absolute;
     width: 100%;
     height: 85vh;
-    position: sticky;
     background-size: cover;
-    top: 0px;
-  }}
+  }
 }
-
+.accordion-item{
+  font-size: 0.8vw;
+}
 .detail-title {
   text-align: center;
   border-bottom: 1px solid hsl(0, 0%, 90%);
@@ -58,7 +62,8 @@
 }
 
 .info {
-  margin-left: 35%;
+  width: 58%;
+  margin-left: 2%;
   .info-body {
     width: 100%;
     padding: 0;
@@ -100,4 +105,66 @@
 
 .product-description{
   font-family: 'lora';
+  font-size: 1vw;
+  padding-bottom: 2%;
+}
+
+@media (max-width:480px) {
+  .product-details {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-size: large;
+    padding-bottom: 10%;
+    .contain {
+      width: 100%;
+      height: 100%;
+      .details {
+        display: flex;
+        margin: 0;padding: 0;
+        padding-top: 70px !important;
+        .preview {
+          width: 100% !important; /* Adjust the width as needed */
+          height: 50vh;
+          margin: 0;padding:0;
+          top: 70px;
+          position: absolute;
+          
+            .detailed-img {
+              width: 100%;
+              height: 100%;
+              background-size: cover;           
+          }
+        }
+  
+        .info {
+          width: 100%;
+          margin: 0;padding: 0;
+          padding-left: 4%;
+          padding-right: 4%;
+          padding-top: 52vh;
+          
+          .info-body {
+            width: 100%;
+            padding: 0;
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+  .product-description{
+    font-family: 'lora';
+    font-size: 4vw;
+    text-align: justify;
+    padding-bottom: 2%;
+  }
+
+  .accordion-item{
+    font-size: 3vw;
+
+  }
+  
 }

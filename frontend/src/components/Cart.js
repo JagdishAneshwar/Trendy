@@ -5,7 +5,7 @@ import Context from "../context/clotheContext";
 const Cart = () => {
   const context = useContext(Context);
 
-  const { getBoughtsInfo, updateBought, boughts } = context;
+  const { getBoughtsInfo, updateBought, boughts, deleteBought } = context;
   useEffect(() => {
     getBoughtsInfo();
     // eslint-disable-next-line
@@ -14,6 +14,11 @@ const Cart = () => {
     id: "",
     equantity: "",
   });
+
+  const onClickRemoveTask = (_id) => {
+    deleteBought(_id)
+    };
+
 
   // const onUpdateBought = async (_id, quantity) => {
   //   if (bought.equantity !== undefined) {
@@ -67,7 +72,8 @@ const Cart = () => {
                     />
                   </h3>
                   <h3>Sum Price: {sum_price}</h3>
-                </div>
+                  <button type="button" onClick={onClickRemoveTask(_id)} class="btn btn-danger">Remove</button></div>
+                
               </div>
             </>
           );

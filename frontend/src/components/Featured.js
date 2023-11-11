@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import clotheContext from "../context/clotheContext";
+import Footer from './Footer'
 import "./scss/_featured.scss";
 
 const Featured = () => {
@@ -475,6 +476,7 @@ const Featured = () => {
           })}
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

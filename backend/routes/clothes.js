@@ -70,4 +70,7 @@ router.post("/addclothe", async (req, res) => {
   }
 });
 
+
+
+
 module.exports = router;

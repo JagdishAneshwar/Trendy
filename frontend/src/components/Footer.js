@@ -3,7 +3,7 @@ import './scss/_footer.scss'
 
 export default function Footer() {
   return (
-    <div className='footer-section'>
+    <section className='footer-section'>
     <div className='column'>
     <h3 className='title-footer'><b>Follow Me</b></h3>
             <a href='https://github.com/JagdishAneshwar' className='footer-link' id="github">github</a><br/>
@@ -20,7 +20,7 @@ export default function Footer() {
             <a href='https://github.com/JagdishAneshwar' className='footer-link' id="github">+91 892-839-3524</a><br/>
             <a href='https://www.linkedin.com/in/jagdish-aneshwar/' className='footer-link' id="github">aneshwarjagdish@gmail.com</a>
     </div>
-    </div>
+    </section>
     
   )
 }

@@ -18,10 +18,13 @@ const ClotheState = (props) => {
     discount: "",
   });
 
+  // const host = "https://trendy-backend.onrender.com"
+  const host = "http://localhost:5000"
+
   // fetch all notes function
   const getClothes = async () => {
     // API calls
-    const response = await fetch(`https://trendy-backend.onrender.com/api/clothes/fetchallclothes/`, {
+    const response = await fetch(`${host}/api/clothes/fetchallclothes/`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +75,7 @@ const ClotheState = (props) => {
 
   const getBoughtsInfo = async () => {
     // API calls
-    const response = await fetch(`https://trendy-backend.onrender.com/api/kart/boughtInfo`, {
+    const response = await fetch(`${host}/api/kart/boughtInfo`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -93,7 +96,7 @@ const ClotheState = (props) => {
     quantity,
     navigate
   ) => {
-    await fetch(`https://trendy-backend.onrender.com/api/kart/addBought`, {
+    await fetch(`${host}/api/kart/addBought`, {
       mode: "cors",
       method: "POST",
       headers: {
@@ -114,7 +117,7 @@ const ClotheState = (props) => {
   };
 
   const updateBought = async (id, quantity) => {
-    const response = await fetch(`https://trendy-backend.onrender.com/api/kart/updateQuantity/${id}`, {
+    const response = await fetch(`${host}/api/kart/updateQuantity/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -137,6 +140,24 @@ const ClotheState = (props) => {
     setBoughts(newBoughts);
   };
 
+  const deleteBought = async (_id) => {
+    const response = await fetch(`${host}/api/kart/delete/${_id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
+    });
+    
+    // eslint-disable-next-line
+    const json = await response.json();
+    console.log(json)
+    const newBoughts = boughts.filter((bought) => {
+      return bought._id !== _id;
+    });
+    setBoughts(newBoughts);
+  };
+
   return (
     <ClotheContext.Provider
       value={{
@@ -149,6 +170,7 @@ const ClotheState = (props) => {
         addBoughtInfo,
         updateBought,
         getBoughtsInfo,
+        deleteBought
       }}
     >
       {props.children}
