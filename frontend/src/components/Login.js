@@ -12,26 +12,31 @@ const Login = () => {
 
   const { email, password } = credentials;
 
-  const onClickLogin = async (e) => {
-    e.preventDefault();
+const onClickLogin = async (e) => {
+  e.preventDefault();
+  try {
     const res = await fetch("https://trendy-backend.onrender.com/api/auth/login", {
       method: "POST",
-      
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Headers": "*",
         "Access-Control-Allow-Methods": "POST, GET, PATCH, DELETE",
         "Access-Control-Allow-Origin": "https://trendy-clothes.netlify.app",
       },
-
       body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
     if (data.token) {
       localStorage.setItem("token", data.token);
       history("/home");
+    } else {
+      console.error("Login failed:", data.error); // Add error handling
     }
-  };
+  } catch (error) {
+    console.error("Error during login:", error); // Add error handling
+  }
+};
+
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
