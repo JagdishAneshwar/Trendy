@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import Magnifier from "./Magnifier";
-import Event from "./Event";
+import Magnifier from "./magnifier";
+import Event from "./event";
 import "./magnifier.css";
 
 // Initialize Event and Magnifier instances outside the component

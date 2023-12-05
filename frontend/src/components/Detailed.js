@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
-import Magnifier from "./Magnifier";
-import Event from "./Event";
+import Magnifier from "./magnifier";
+import Event from "./event";
 import { useLocation, useNavigate } from "react-router-dom";
 import clotheContext from "../context/clotheContext";
 import Footer from './Footer';

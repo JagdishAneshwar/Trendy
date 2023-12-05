@@ -12,7 +12,6 @@ const Login = () => {
 
   const { email, password } = credentials;
 
-<<<<<<< Updated upstream
 const onClickLogin = async (e) => {
   e.preventDefault();
   try {
@@ -24,13 +23,6 @@ const onClickLogin = async (e) => {
         "Access-Control-Allow-Methods": "POST, GET, PATCH, DELETE",
         "Access-Control-Allow-Origin": "https://trendy-clothes.netlify.app",
       },
-=======
-  const onClickLogin = async (e) => {
-    e.preventDefault();
-    const res = await fetch("http://localhost:5000/api/auth/login", {
-      method: "POST",
-      headers:{"Content-Type": "application/json"},
->>>>>>> Stashed changes
       body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
