@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Navbar from "./components/Navbar";
 import Detailed from "./components/Detailed";
+import Default from "./components/Default";
 // import LocomotiveScroll from "locomotive-scroll";
 // import "./components/scss/_locomotive-scroll.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -31,12 +32,13 @@ function App() {
       <ClotheState>
         <div className="smoother">
           <Router>
-            <Navbar />
+             <Navbar /> 
             <Routes>
               <Route exact path="/signup" element={<Signup />} />
               <Route exact path="/" element={<Login />} />
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/home" element={<Home />} />
+              <Route exact path="/magnify" element={<Default/>} />
               <Route exact path="/clothes" element={<Featured />} />
               <Route exact path="/featured" element={<Featured />} />
               <Route path="/product-details" element={<Detailed />} />

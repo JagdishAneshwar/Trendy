@@ -21,8 +21,6 @@
 * @author Mark Rolich <mark.rolich@gmail.com>
 */
 var Magnifier = function (evt, options) {
-    "use strict";
-
     var gOptions = options || {},
         curThumb = null,
         curData = {
@@ -402,28 +400,30 @@ var Magnifier = function (evt, options) {
             thumbData.largeH = Math.round(thumbData.zoom * h);
         };
 
-    this.attach = function (options) {
-        if (options.thumb === undefined) {
-            throw {
-                name: 'Magnifier error',
-                message: 'Please set thumbnail',
-                toString: function () {return this.name + ": " + this.message; }
-            };
-        }
-
-        var thumb = $(options.thumb),
-            i = 0;
-
-        if (thumb.length !== undefined) {
-            for (i; i < thumb.length; i += 1) {
-                options.thumb = thumb[i];
+        this.attach = function (options) {
+            if (!options.thumb) {
+                throw {
+                    name: 'Magnifier error',
+                    message: 'Please set thumbnail',
+                    toString: function () { return this.name + ": " + this.message; }
+                };
+            }
+        
+            var thumb = $(options.thumb),
+                i = 0;
+        
+            if (thumb.length !== undefined) {
+                for (i; i < thumb.length; i += 1) {
+                    options.thumb = thumb[i];
+                    this.set(options);
+                }
+            } else {
+                options.thumb = thumb;
                 this.set(options);
             }
-        } else {
-            options.thumb = thumb;
-            this.set(options);
-        }
-    };
+        };
+        
+        
 
     this.setThumb = function (thumb) {
         curThumb = thumb;
@@ -588,9 +588,6 @@ var Magnifier = function (evt, options) {
         }
     });
 };
-
-
-
 
 
 export default Magnifier;

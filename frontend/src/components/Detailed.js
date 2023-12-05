@@ -1,40 +1,69 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import Magnifier from "./Magnifier";
+import Event from "./Event";
 import { useLocation, useNavigate } from "react-router-dom";
 import clotheContext from "../context/clotheContext";
-import Footer from './Footer'
+import Footer from './Footer';
+import "./magnifier.css";
 import "./scss/_detailed.scss";
 
+// Initialize Event and Magnifier instances outside the component
+const evt = new Event();
+const m = new Magnifier(evt);
+
 const Detailed = () => {
+  const thumb = useRef(null);
+
   const location = useLocation();
   const navigate = useNavigate();
   const context = useContext(clotheContext);
   const { addBoughtInfo } = context;
-  const { id, image, brand, description, price, title, discount } =
-    location.state;
+  const { id, image, brand, description, price, title, discount } = location.state;
+
   var quantity = 0;
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-  
 
-  const increament = () => {
+    // Ensure thumb.current is not null before attaching the magnifier
+    if (thumb.current) {
+      m.attach({
+        thumb: `#${thumb.current.id}`,
+        large: image,
+        largeWrapper: "preview",
+        mode: 'inside',
+        zoom: 3,
+        zoomable: true
+      });
+    }
+  }, [image]); // Include 'image' in the dependency array to react to changes in the 'image' prop
+
+  const increment = () => {
     quantity++;
     return quantity;
   };
+
   return (
     <>
-    <section className="product-details" data-scroll-section id="hello">
-      <div className="contain">
+      <section className="product-details" data-scroll-section id="hello">
         <div className="details">
-          <div className="preview">
-            <div
-            className="detailed-img"
-                    style={{backgroundImage: `url(${image})`}}   
-                    
-                    alt="..."
-                  ></div>          
+        <div className="magnify-main-wrapper preview">
+          <div className="magnifier-thumb-wrapper demo">
+            <img
+              className="detailed-img"
+              id="thumb"
+              ref={thumb}
+              data-large-img-url={image}
+              data-large-img-wrapper="preview"
+              src={image}
+              alt="..."
+            />
+            <div className="magnifier-preview example heading" id="preview" style={{ width: "200px", height: "133px" }}>
+              
+            </div>
           </div>
-          <div className="info ">
+          </div>
+          <div className="info">
             <div className="card-body info-body">
               <h5 className="brand-name">{brand}</h5>
               <h4 className="detail-product-title">{title}</h4>
@@ -151,7 +180,7 @@ const Detailed = () => {
                     price,
                     discount,
                     "buy",
-                    increament(),
+                    increment(),
                     navigate
                   );
                 }}
@@ -161,9 +190,8 @@ const Detailed = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <Footer/>
+      </section>
+      <Footer />
     </>
   );
 };

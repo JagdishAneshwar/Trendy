@@ -9,25 +9,26 @@
   position: relative;
   font-size: large;
   padding-top: 70px;
-  .contain {
-    width: 100%;
-    height: 100%;
-  }
   .details {
     width: 100%;
     height: 100%;
     margin: 2%;
     display: flex;
+    position: sticky;
   }
 }
+
 
 .preview {
   height: 100%;
   width: 33%;
-  position: sticky;
-  top: 90px;
-  background: green;
-  z-index: -3;
+  position: relative;
+  z-index: 3;
+  .demo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .detailed-img {
     position: absolute;
     width: 100%;

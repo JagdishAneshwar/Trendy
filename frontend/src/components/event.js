@@ -6,7 +6,7 @@
 *
 * @author Mark Rolich <mark.rolich@gmail.com>
 */
-var Event = function () {
+export default function Event() {
     "use strict";
     this.attach = function (evtName, element, listener, capture) {
         var evt         = '',
@@ -28,7 +28,7 @@ var Event = function () {
         }
 
         return handler.apply(element, [evt, function (ev) {
-            var e   = ev || evt,
+            var e   = ev || window.event,
                 src = e.srcElement || e.target;
 
             listener(e, src);
@@ -65,5 +65,3 @@ var Event = function () {
     };
 };
 
-
-export default Event;

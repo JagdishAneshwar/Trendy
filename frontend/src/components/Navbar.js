@@ -28,7 +28,7 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="nav-start collapse navbar-collapse" id="navbarNav">
+          <div className="nav-start" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
                 {!localStorage.getItem("token") ? (
