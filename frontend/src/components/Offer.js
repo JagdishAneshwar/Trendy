@@ -24,7 +24,7 @@ const Offer = () => {
     }
   };
 
-  console.log(clothes)
+  
 
   return (
     <section className="offer-section" data-scroll-section>

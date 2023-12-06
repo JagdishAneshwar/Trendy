@@ -7,6 +7,7 @@ import Seasonwise from "./Seasonwise";
 import Footer from './Footer'
 
 const Home = () => {
+
   return (
     <>
       <Video />

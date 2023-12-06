@@ -29,4 +29,5 @@ $bold: 700;
 $paraSize: 55ch;
 
 
-$bodyDesktop:  clamp(2rem, 10vw, 5rem);
+$bodyDesktop:  clamp(1.5rem, 0.5vw, 5rem);
+$bodyMobile:  clamp(0.8rem, 0.5vw, 5rem);

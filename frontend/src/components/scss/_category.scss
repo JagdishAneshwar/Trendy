@@ -59,3 +59,25 @@
   display: block;
   background-color: hsl(40, 2%, 40%);
 }
+
+@media (max-width: 768px) {
+  .category-section {
+    height: fit-content !important;
+  }
+
+  .categories {
+    width: 100%;
+    height: auto; /* Adjust the height as needed */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Add space between the categories */
+    z-index: 2;
+    margin-left: 6vw;
+    margin-right: 6vw;
+
+    .category {
+      width: 48%; /* Two categories side by side, adjust as needed */
+      margin-bottom: 3vw; /* Adjust the margin as needed */
+    }
+  }
+}
