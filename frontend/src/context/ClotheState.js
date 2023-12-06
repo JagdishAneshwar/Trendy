@@ -18,8 +18,8 @@ const ClotheState = (props) => {
     discount: "",
   });
 
-  // const host = "https://trendy-backend.onrender.com"
-  const host = "http://localhost:5000"
+   const host = "https://trendy-backend.onrender.com"
+  // const host = "http://localhost:5000"
 
   // fetch all notes function
   const getClothes = async () => {
