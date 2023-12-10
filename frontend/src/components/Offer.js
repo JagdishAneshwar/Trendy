@@ -56,9 +56,10 @@ const Offer = () => {
                   ></div>
                   <div className="featured-card-body">
                     <div className="featured-card-wrapper">
-                      <h2 className="featured-brand-name">
+                      <h2 className="featured-clothe-title">
                         {clothe.title}
                       </h2>
+                      <p className="featured-brand-name">{clothe.brand}</p>
                       <p className="featured-card-text text-truncate">
                         {clothe.description}
                       </p>

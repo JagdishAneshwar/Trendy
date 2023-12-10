@@ -60,7 +60,7 @@
   background-color: hsl(40, 2%, 40%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .category-section {
     height: fit-content !important;
   }
@@ -72,8 +72,8 @@
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Add space between the categories */
     z-index: 2;
-    margin-left: 6vw;
-    margin-right: 6vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
 
     .category {
       width: 48%; /* Two categories side by side, adjust as needed */

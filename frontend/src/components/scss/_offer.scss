@@ -3,6 +3,7 @@
 .offer-section {
   position: relative;
   background-color: rgb(229, 239, 255);
+  padding-bottom: 3%;
 }
 
 .line-1 {
@@ -92,21 +93,21 @@
     display: none;
   }
   
-
+  .featured-card-wrapper{margin: 12px;}
+  .featured-clothe-title{font-size: 22px;}
+        .featured-brand-name{font-size: 14px;}
+        .featured-card-text{font-size: 18px ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 .featured-img {
-  width: 28.5%;
-  height: 600px;
+  width: 380px;
+  height: fit-content;
   align-self: center;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-bottom: 4vw;
   justify-content: center;
   display: inline-block;
   background-color: #fff;
-  margin: 2vw;
+  margin: 2%;
     .featured-card-img-top {
       width: 100%;
-      height: 500px;
+      height: 450px;
       object-fit: contain;
       display: block;
       margin-left: auto;
@@ -132,61 +133,48 @@
 }
 }
 }
-
-.featured-card-text{
-  font-size: $bodyDesktop !important;
-}
+  
 
 
 
-@media (max-width: 480px){
-  .featured-imgs {
-    width: 100%;
-    height: 320px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    padding-left: 3rem;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }  
-  .featured-card-text{
-    font-size: $bodyMobile !important;
-  }
+@media (max-width:1200px){
   .featured-img {
-    width: 50% !important ;
-    height: 270px !important;
+    width: 300px !important;
+    height: fit-content;
     align-self: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-bottom: 4vw;
     justify-content: center;
     display: inline-block;
     background-color: #fff;
-    margin: 2vw;align-items: center;
+    margin: 2%;
       .featured-card-img-top {
-        width: 100% !important;
-        height: 85% !important;
-        object-fit: contain;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        background-repeat: no-repeat;
-    background-size: cover;
-    
-        transition: 0.3s ease-in-out 0.1s;
-        &:hover {
-          transform: scale(1.05);
-        }
-        border: none;
-        outline: none;    
-    }
-    .featured-brand-name{
-      font-size: 12px;
-    }
-  } 
+        width: 100%;
+        height: 430px !important;}
+      }
+             
+      .featured-brand-name{font-size: 10px;}
+      .featured-card-wrapper{margin: 12px;}
+      .featured-clothe-title{font-size: 20px;}
+      .featured-card-text{font-size: 16px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 }
+
+
+@media (max-width:800px){
+  .featured-img {
+    width: 200px !important;
+    height: fit-content;
+    align-self: center;
+    justify-content: center;
+    display: inline-block;
+    background-color: #fff;
+    margin: 2%;
+      .featured-card-img-top {
+        width: 100%;
+        height: 300px !important;}
+      }
+      .featured-card-wrapper{margin: 10px;}
+      .featured-brand-name{font-size: 8px;}
+      .featured-clothe-title{font-size: 14px !important;}
+      .featured-card-text{font-size: 12px ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+}
+
+

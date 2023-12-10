@@ -1,0 +1,63 @@
+@import "./variable";
+
+.filter {
+    margin: 8px;
+    .accordion-button {
+      font-size: $body;
+      &::after {
+        background-image: url("../../components/img/assets/plus-lg.svg");
+      }
+      &:not(.collapsed):after {
+        background-image: url("../../components/img/assets/dash-lg.svg");
+      }
+    }
+    .form-check {
+      #CheckBox {
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .form-check-label {
+        font-size: $body;
+      }
+    }
+  }
+
+  
+  .filterButton{
+    width: 100%;
+    color: #000;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    z-index: 50;
+    background: rgba(243,243,243 );
+    border: 0;
+    font-size: 20px;
+  }
+
+  .desktop-filter{
+    display: block;
+}
+
+
+.mobile-filter, .filterButton{
+    display: none;
+}
+
+  @media(max-width:800px) {
+    .filter {
+        height: 100%;
+        margin-top: 70px;
+        margin-left: 0;
+    padding-top: 2%;}
+    
+.desktop-filter{
+    display: none;
+}
+.mobile-filter,.filterButton{
+    display: block;
+}
+  }

@@ -17,7 +17,9 @@ const Navbar = () => {
     <div className="nav-bar-wrapper">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <button
+
+          <div className="nav-end">
+                    <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -28,9 +30,8 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="nav-start" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
+            <ul className="navbar-nav" id="navbarNav">
+            <li className="nav-item">
                 {!localStorage.getItem("token") ? (
                   ""
                 ) : (
@@ -52,13 +53,6 @@ const Navbar = () => {
                   SHOP
                 </Link>
               </li>
-            </ul>
-          </div>
-          <Link className="navbar-brand-name" to="/home">
-            TRENDY
-          </Link>
-          <div className="nav-end">
-            <ul className="navbar-nav">
               {!localStorage.getItem("token") ? (
                 <form className="d-flex" >
                   <li className="nav-item">

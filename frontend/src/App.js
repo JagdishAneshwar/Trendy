@@ -5,7 +5,7 @@ import Cart from "./components/Cart";
 import Featured from "./components/Featured";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Menu";
 import Detailed from "./components/Detailed";
 import Default from "./components/Default";
 // import LocomotiveScroll from "locomotive-scroll";

@@ -58,9 +58,9 @@ const Detailed = () => {
               src={image}
               alt="..."
             />
-            <div className="magnifier-preview example heading" id="preview" style={{ width: "200px", height: "133px" }}>
+            {/* <div className="magnifier-preview example heading" id="preview" style={{ width: "200px", height: "133px" }}>
               
-            </div>
+            </div> */}
           </div>
           </div>
           <div className="info">

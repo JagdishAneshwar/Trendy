@@ -15,6 +15,7 @@
     margin: 2%;
     display: flex;
     position: sticky;
+    flex-direction: row;  
   }
 }
 
@@ -110,10 +111,10 @@
   padding-bottom: 2%;
 }
 
-@media (max-width:480px) {
+@media (max-width:800px) {
   .product-details {
     width: 100vw;
-    height: 100%;
+    height: fit-content;
     padding: 0;
     margin: 0;
     position: relative;
@@ -122,39 +123,43 @@
     .contain {
       width: 100%;
       height: 100%;
-      .details {
-        display: flex;
-        margin: 0;padding: 0;
-        padding-top: 70px !important;
-        .preview {
-          width: 100% !important; /* Adjust the width as needed */
-          height: 50vh;
-          margin: 0;padding:0;
-          top: 70px;
-          position: absolute;
-          
-            .detailed-img {
-              width: 100%;
-              height: 100%;
-              background-size: cover;           
-          }
-        }
-  
-        .info {
-          width: 100%;
-          margin: 0;padding: 0;
-          padding-left: 4%;
-          padding-right: 4%;
-          padding-top: 52vh;
-          
-          .info-body {
-            width: 100%;
-            padding: 0;
-            margin-top: 0px;
-          }
-        }
-      }
     }
+  }
+
+  .details {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column !important;  
+    margin: 0 !important;
+    padding: 0;
+  }
+  .preview {
+    width: 100% !important; 
+    height: 100%;
+    margin: 0;padding:0;
+    
+  }
+  .detailed-img {
+    position: absolute;
+    width: 100%;
+    height: 50vh !important;
+    background-size: cover !important;
+  }
+
+  .info {
+    width: 100% !important;
+
+    position: absolute;
+    top: 50vh;
+    margin: 0;padding: 0;
+    padding-left: 4%;
+    padding-right: 4%;
+  }        
+  .info-body {
+    width: 100%;
+    padding: 0;
+    margin-top: 0px;
   }
   .product-description{
     font-family: 'lora';

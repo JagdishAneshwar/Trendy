@@ -1,0 +1,141 @@
+// _fetauredproductcard.scss
+@import "./variable";
+
+.product-wrapper {
+  width: 250px;
+  margin: 2%;
+}
+
+.filtered-product {
+  font-size: $font;
+  .card-img-top {
+    width: 100%; // Ensure the image takes 100% width within the container
+    height: 350px;
+    background-size: cover; // Ensure the image covers the entire container
+    background-repeat: no-repeat;
+    float: left;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+    color: grey;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .offer {
+    font-weight: bold;
+    color: hsl(133, 63%, 40%);
+  }
+
+  .stroke-text {
+    text-decoration: line-through;
+    color: hsl(0, 0%, 53%);
+    margin-left: 2px;
+  }
+
+  .card-body {
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
+    float: left;
+    clear: left;
+    background-color: beige;
+  }
+}
+
+
+@media (max-width: 1050px) {
+    .product-wrapper {
+      width: 200px;
+      height: 100%; /* Allow height to adjust based on content */
+      
+      }
+
+      .card-img-top {
+        width: 100%; // Ensure the image takes 100% width within the container
+        height: 280px !important;
+        background-size: cover !important; 
+        background-repeat: no-repeat;
+        float: left;
+      }
+
+    
+    
+    }
+
+
+@media (max-width: 800px) {
+    .product-wrapper {
+      width: 250px;
+      height: fit-content;
+      margin: 0 !important;
+      padding: 0;
+
+      
+        &:not(:first-child) {
+          border-top: 1px solid #ccc; // Add top border for all rows except the first one
+        }
+      
+        &:not(:last-child) {
+          border-bottom: 1px solid #ccc; // Add bottom border for all rows except the last one
+        }
+      
+        .filtered-product {
+            margin: 0 !important;
+          border-left: 1px solid #ccc; // Add left border for all columns
+        }
+      
+        &:first-child .filtered-product {
+          border-top: 1px solid #ccc; // Add top border for the first row, first column
+        }
+      
+        &:last-child .filtered-product {
+          border-right: 1px solid #ccc; // Add right border for the last row, all columns
+        }
+      
+      
+    }
+  
+    .filtered-product {
+      height: 100%; /* Allow height to adjust based on content */
+      width: 100%;
+      position: relative;
+        
+    }
+  
+    .card-img-top {
+      width: 100%; // Each image takes 50% width for two images in a row
+      height: 100%;
+      float: left;
+      background-size: 100% 100%; /* Ensure the image fully covers the container */
+      background-repeat: no-repeat;
+    }
+  
+    .card-body {
+        float: left;
+        clear: left;
+      width: 50%;
+      height: fit-content;
+      position: relative;
+      
+    }
+  }
+  
+
+  @media (max-width: 493px) {
+    .product-wrapper {
+      width: 200px;
+      height: fit-content;
+    }
+}
+
+@media (max-width: 393px) {
+    .product-wrapper {
+      width: 100%;
+      height: fit-content;
+    }
+}

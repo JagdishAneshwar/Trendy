@@ -47,6 +47,7 @@ const Seasonwise = () => {
                 { category: "traditional", gender: "", fabric: "" },
                 navigate
               );
+              
             }}
           >
             <img
