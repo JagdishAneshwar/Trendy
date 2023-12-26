@@ -46,7 +46,7 @@ const onClickLogin = async (e) => {
     <>
     <div className="login-section">
       <form className='login-form' onSubmit={onClickLogin}>
-      <h1>Login</h1>
+      <h1>Login: Beacuse of Free Tier there will be some delay, Refresh Page after while</h1>
         <div>
           <label htmlfor="exampleInputEmail1" className="form-label">
             Email address
