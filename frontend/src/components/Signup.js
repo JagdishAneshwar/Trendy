@@ -37,7 +37,7 @@ const Signup = () => {
     <>
     <div className="signup-section">
       <form className="signup-form" onSubmit={onClickSignUp}>
-      <h1>SignUp</h1>
+      <h1>SignUp: Beacuse of Free Tier there will be some delay, Refresh Page after while</h1>
         <div className="mb-3">
           <label htmlfor="name" className="form-label">
             Name
