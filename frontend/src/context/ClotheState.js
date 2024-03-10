@@ -18,7 +18,7 @@ const ClotheState = (props) => {
     discount: "",
   });
 
-  const host = "https://api-trendy.vercel.app/"
+  const host = "https://api-trendy.vercel.app"
   //  const host = "http://localhost:5000"
 
   // fetch all notes function
