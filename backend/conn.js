@@ -1,7 +1,6 @@
 const mongo = require("mongoose");
 
-//mongodb+srv://Jagdish:dF5Y51Bz5dknw7wn@cluster0.jmpfje9.mongodb.net/test
-const mongoURI ='mongodb+srv://aneshwarjagdish:FbhOWfhjTmQMeDe6@trendy.m4fetu3.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI;
 
 const connectionParams = {
   useNewUrlParser: true,
