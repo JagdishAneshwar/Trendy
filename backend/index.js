@@ -14,15 +14,7 @@ app.use("/api/clothes", cors(), require("./routes/clothes"));
 app.use("/api/kart", cors(), require("./routes/kart"));
 app.get('/', cors(), (req, res)=>{ res.json("Hello") })
 
-if (
-  process.env.NODE_ENV === "production" ||
-  process.env.NODE_ENV === "staging"
-) {
-  app.use(express.static("frontend/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/frontend/build/index.html"));
-  });
-}
+
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
