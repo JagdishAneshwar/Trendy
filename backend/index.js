@@ -1,5 +1,4 @@
 const connToMongo = require("./conn");
-const { port } = require("./config");
 const express = require("express");
 var cors = require("cors");
 require("dotenv").config();
@@ -13,6 +12,7 @@ app.use(express.json());
 app.use("/api/auth", cors(), require("./routes/auth"));
 app.use("/api/clothes", cors(), require("./routes/clothes"));
 app.use("/api/kart", cors(), require("./routes/kart"));
+app.get('/', cors(), (req, res)=>{ res.json("Hello") })
 
 if (
   process.env.NODE_ENV === "production" ||
