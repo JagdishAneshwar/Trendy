@@ -1,5 +1,4 @@
 const express = require("express");
-const { privateKey } = require("../config");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
@@ -54,7 +53,7 @@ router.post(
           id: user.id,
         },
       };
-      var token = jwt.sign(data, privateKey);
+      var token = jwt.sign(data, process.env.PRIVATE_KEY);
       // Giving successful response
       success = true;
       res.json({ token, success });
@@ -102,7 +101,7 @@ router.post(
           id: user.id,
         },
       };
-      const token = jwt.sign(data, privateKey);
+      const token = jwt.sign(data, process.env.PRIVATE_KEY);
       res.json({ token });
     } catch (err) {
       console.error(err.message);
