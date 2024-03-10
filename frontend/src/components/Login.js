@@ -15,7 +15,7 @@ const Login = () => {
 const onClickLogin = async (e) => {
   e.preventDefault();
   try {
-    const res = await fetch("https://trendy-backend.onrender.com/api/auth/login", {
+    const res = await fetch("https://api-trendy.vercel.app/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
