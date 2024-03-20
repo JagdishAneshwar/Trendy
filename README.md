@@ -27,7 +27,7 @@ Trendy is designed to provide users with a seamless shopping experience, showcas
 
 1. Clone the repository to your local machine.
 2. Install the necessary dependencies for the backend and frontend using `npm install` within their respective directories.
-3. Start the backend server with `npm start`.
+3. Start the backend server with `node index`.
 4. Launch the frontend application with `npm start`.
 
 ## Backend Setup
@@ -36,7 +36,7 @@ The backend of Trendy is developed using Node.js and Express, with MongoDB as th
 
 1. Navigate to the `backend` directory.
 2. Run `npm install` to install the required packages.
-3. Use `npm start` to launch the backend server.
+3. Use `node index` to launch the backend server.
 
 ## Frontend Setup
 
